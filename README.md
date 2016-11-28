@@ -3,5 +3,7 @@
 ## Running
 
 ```shell
+$ bundle install
+
 $ ruby main.rb
 ```
