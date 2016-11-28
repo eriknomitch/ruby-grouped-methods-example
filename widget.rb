@@ -1,3 +1,9 @@
+require "ostruct"
+require "pry"
+require "facets/class/cattr"
+
+load "grouped_methods.rb"
+
 # ------------------------------------------------
 # CLASS->WIDGET ----------------------------------
 # ------------------------------------------------
