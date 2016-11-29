@@ -29,15 +29,13 @@ class Foo
 end
 ```
 
-*Grouped methods allow you to structure and execute this more cleanly and clearly.*
+**Grouped methods allow you to structure and execute this more cleanly and clearly.**
 
 Since all of these methods pertain to `bars`, we can group them as follows:
 
 ```Ruby
 
 class Foo
-
- # ...
 
  define_grouped_method :bars, :with_bazs do
    # ...
@@ -53,7 +51,7 @@ class Foo
 
 ```
 
-*Now, they can be cleanly found, executed, and remembered as follows:*
+**Now, they can be cleanly found, executed, and remembered as follows:**
 
 ```Ruby
 
@@ -65,9 +63,19 @@ foo.bars.deleted_selected(selected)
 
 ```
 
-1. Your class is getting large and method 
+Compare that with the first example would have required:
 
-## Running
+```Ruby
+
+foo = Foo.find(123)
+
+foo.bars_with_baz
+foo.merge_baz_with_bar(baz)
+foo.delete_selected_bars(selected)
+
+```
+
+## Running This Example
 
 ```shell
 $ bundle install
