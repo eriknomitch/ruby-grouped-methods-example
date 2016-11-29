@@ -53,6 +53,17 @@ class Foo
 
 ```
 
+*Now, they can be cleanly found, executed, and remembered as follows:*
+
+```Ruby
+
+foo = Foo.find(123)
+
+foo.bars.with_bazs
+foo.bars.merge_baz(baz)
+foo.bars.deleted_selected(selected)
+
+```
 
 1. Your class is getting large and method 
 
