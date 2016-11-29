@@ -6,7 +6,7 @@ This is solely a proof of concept.
 
 When a class passes a certain threshold of complexity, method structure and naming can start to become a bit overwhelming. Most likely, some sets of methods will appear that can be though of as a part of a "group" (i.e., they all pertain to the same thing but are in the same class).
 
-Naming can become taxing and potentially ugly:
+Naming can become taxing and potentially messy. Let's take a look at this class:
 
 ```Ruby
 
@@ -31,7 +31,7 @@ end
 
 **Grouped methods allow you to structure and execute this more cleanly and clearly.**
 
-Since all of these methods pertain to `bars`, we can group them as follows:
+Since all of these methods pertain to `bars`, we can group them as so:
 
 ```Ruby
 
@@ -51,27 +51,27 @@ class Foo
 
 ```
 
-**Now, they can be cleanly found, executed, and remembered as follows:**
+**Now, they can be cleanly found, executed, and remembered:**
 
 ```Ruby
 
 foo = Foo.find(123)
 
 foo.bars.with_bazs
-foo.bars.merge_baz(baz)
-foo.bars.deleted_selected(selected)
+foo.bars.merge_baz
+foo.bars.deleted_selected
 
 ```
 
-Compare that with the first example would have required:
+Compare that with the first example which would have required:
 
 ```Ruby
 
 foo = Foo.find(123)
 
 foo.bars_with_baz
-foo.merge_baz_with_bar(baz)
-foo.delete_selected_bars(selected)
+foo.merge_baz_with_bar
+foo.delete_selected_bars
 
 ```
 
